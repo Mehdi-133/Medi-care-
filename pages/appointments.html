@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/tailwind.css">
+        <title>MediCare</title>     
+    </head>
+
+    <body>
+
+        <!-- navbar -->
+        <nav class=" w-full h-18 bg-white/95 flex blur-effect">
+            <div
+                class="flex justify-around w-full items-center px-10   shadow  ">
+                <div class="flex items-center justify-start">
+
+                <a href="/index.html"
+                        class="font-mono text-2xl  bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text cursor-pointer">MediCare+</a>
+
+                </div>
+
+                <div class="flex">
+                    <ul class="text-gray-700 flex space-x-5  ">
+
+                        <li  class="hover:text-blue-600 cursor-pointer"> <a href="/index.html"> Accueil </a></li>
+                        <li class="hover:text-blue-600 cursor-pointer"> <a href="/pages/doctors.html">Médecins</a></li>
+                        <li class="hover:text-blue-600 cursor-pointer"><a href="/pages/appointments.html"> Rendez-vous </a></li>
+                        <li class="hover:text-blue-600 cursor-pointer"><a href="/pages/tracker.html"> Santé </a></li>
+
+                    </ul>
+                </div>
+
+            <div class="flex justify-between gap-5 items-center-safe">
+
+               <img class="h-8 w-8 " src="/images/sun.png" alt="light">
+
+                <label for="check" class="bg-blue-900 cursor-pointer relative w-15 h-8 rounded-full">
+                    <input type="checkbox" id="check" class="sr-only peer">
+                    <span class="w-2/5 h-4/5 bg-blue-300 absolute rounded-full
+                    left-1 top-1 peer-checked:bg-blue-600 peer-checked:left-8
+                    transition-all duration-500"></span>
+                </label>
+
+
+               <img class="h-8 w-8" src="/images/moon.png" alt="dark">
+            </div>
+
+
+            </div>
+
+        </nav>
+
+
+
+         <footer class=" mb-12 ">
+            <div class="text-center text-sm space-y-3">
+                <p class="mt-10">&copy;  2025 MediCare+. Votre santé, notre priorité </p>
+                <p> Ceci est une application de démonstration. Ne pas utiliser pour des données médicales réelles. </p>
+                <p>Fait avec ❤️ et Youdev</p>
+            </div>
+        </footer>
+    </body>
+</html>
