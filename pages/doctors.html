@@ -12,232 +12,91 @@
         <!-- navbar -->
         <nav class=" fixed w-full h-18 bg-white/95 flex blur-effect z-100">
             <div
-                class="flex justify-around w-full items-center px-10   shadow  ">
+                class="flex justify-around w-full items-center    shadow  ">
                 <div class="flex items-center justify-start">
 
                     <a href="/index.html"
                         class="font-mono text-2xl  bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text cursor-pointer">MediCare+</a>
 
                 </div>
-
-                <div class="flex">
-                    <ul class="text-gray-700 flex space-x-5  ">
-
-                        <li class="hover:text-blue-600 cursor-pointer"> <a
-                                href="/index.html"> Accueil </a></li>
-                        <li class="hover:text-blue-600 cursor-pointer"> <a
-                                href="/pages/doctors.html">Médecins</a></li>
-                        <li class="hover:text-blue-600 cursor-pointer"><a
-                                href="/pages/appointments.html"> Rendez-vous
-                            </a></li>
-                        <li class="hover:text-blue-600 cursor-pointer"><a
-                                href="/pages/tracker.html"> Santé </a></li>
-
-                    </ul>
+                <div class="md:hidden">
+                    <button id="burger-btn"
+                        class=" text-gray-700 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <img class="w-10 h-10" src="/images/télécharger.png"
+                            alt="burger">
+                    </button>
                 </div>
 
-                <div class="flex justify-between gap-5 items-center-safe">
+                <div id="mobile-menu"
+                    class=" hidden md:flex   md:items-center md:gap-8
+                        absolute md:static top-18 left-0 w-full md:w-auto 
+                        bg-white/95 md:bg-transparent shadow-md md:shadow-none space-y-8">
+                    <div class="flex align-middle justify-center  ">
+                        <ul class=" text-gray-700 flex space-x-13 " id="cl">
 
-                    <img class="h-8 w-8 " src="/images/sun.png" alt="light">
+                            <li class="hover:text-blue-600 cursor-pointer"> <a
+                                    href="/index.html"> Accueil </a></li>
+                            <li class="hover:text-blue-600 cursor-pointer"> <a
+                                    href="/pages/doctors.html">
+                                    Médecins</a></li>
+                            <li class="hover:text-blue-600 cursor-pointer"><a
+                                    href="/pages/appointments.html"> Rendez-vous
+                                </a></li>
 
-                    <label for="check"
-                        class="bg-blue-900 cursor-pointer relative w-15 h-8 rounded-full">
-                        <input type="checkbox" id="check" class="sr-only peer">
-                        <span
-                            class="w-2/5 h-4/5 bg-blue-300 absolute rounded-full
-                    left-1 top-1 peer-checked:bg-blue-600 peer-checked:left-8
-                    transition-all duration-500"></span>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </nav>
+            <section id="doctor"
+                class=" flex flex-col gap-7 bg-gradient-to-b from-blue-100 to-purple-20 ">
+                <div
+                    class="  flex justify-center items-center font-mono text-4xl  bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text mt-30">
+                    <h1>
+                        Nos Médecins
+                    </h1>
+                </div>
+
+                <div
+                    class="max-w-2xl mx-auto bg-white rounded-xl shadow-md p-4 flex flex-col space-y-2 sm:flex-row sm:items-center sm:space-y-0 sm:space-x-4 ">
+
+                    <label for="specialty-select"
+                        class="px-5 text-gray-700 font-medium"> Filtrer par
+                        Spécialité :
                     </label>
 
-                    <img class="h-8 w-8" src="/images/moon.png" alt="dark">
+                    <select id="specialty-select" name="specialty"
+                        class="form-select block w-full border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer">
+
+                        <option value>Toutes les Spécialités</option>
+                        <option value="cardiologie">Cardiologie</option>
+                        <option value="dermatologie">Dermatologie</option>
+                        <option value="pediatrie">Pédiatrie</option>
+                        <option value="neurologie">Neurologie</option>
+                    </select>
+
                 </div>
 
-            </div>
+                <div class="flex flex-wrap justify-center gap-8 my-20 "
+                    id="Cards">
 
-        </nav>
+                </div>
 
-        <section id="doctor"
-            class="flex flex-col gap-7 bg-gradient-to-b from-blue-100 to-purple-20 ">
-            <div
-                class="flex justify-center items-center font-mono text-4xl  bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text mt-30">
-                <h1>
-                    Nos Médecins
-                </h1>
-            </div>
+            </section>
 
-            <div
-                class=" max-w-2xl mx-auto h-15 bg-white rounded-xl shadow-md p-4 flex items-center space-x-4">
-
-                <label for="specialty-select"
-                    class=" px-5 text-gray-700 font-medium w-100">
-                    Filtrer par Spécialité :
-                </label>
-
-                <select id="specialty-select" name="specialty"
-                    class="form-select block w-full  border-transparent rounded-md
-               focus:outline-none focus:ring-2 focus:ring-blue-500 
-               cursor-pointer">
-
-                    <option value>Toutes les Spécialités</option>
-                    <option value="cardiologie">Cardiologie</option>
-                    <option value="dermatologie">Dermatologie</option>
-                    <option value="pediatrie">Pédiatrie</option>
-                    <option value="neurologie">Neurologie</option>
-                </select>
-
-            </div>
-
-            <div class="flex flex-wrap justify-center gap-8 my-20">
-
+            <footer class=" mt-12 mb-12  ">
                 <div
-                    class="bg-white rounded-2xl shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-blue-400 focus-within:ring-2 focus-within:ring-blue-500 max-w-xs cursor-pointer">
-                    <div class="p-5 text-center">
-                        <img src="/images/2645c5de51ce043e2b8242b23f8b9fa1.jpg"
-                            alt="Doctor"
-                            class="object-cover w-full h-64 rounded-lg">
-                        <h1
-                            class="text-lg font-semibold text-gray-800 hover:text-blue-600 transition mt-3">
-                            Dr. Sarah Johnson
-                        </h1>
-                        <p
-                            class="text-blue-600 font-medium mt-1">Cardiologue</p>
-                        <p class="text-gray-500 text-sm mt-2">Centre Médical de
-                            New York</p>
-                        <div class="flex items-center justify-center mt-3">
-                            <span
-                                class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                            <span
-                                class="text-sm text-gray-700 font-medium">Online</span>
-                        </div>
-                    </div>
+                    class="text-center text-sm space-y-3 border-t-1 border-gray-500">
+                    <p class="mt-10">&copy; 2025 MediCare+. Votre santé, notre
+                        priorité </p>
+                    <p> Ceci est une application de démonstration. Ne pas
+                        utiliser
+                        pour des données médicales réelles. </p>
+                    <p>Fait avec ❤️ et Youdev</p>
                 </div>
+            </footer>
 
-                <div
-                    class="bg-white rounded-2xl shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-blue-400 focus-within:ring-2 focus-within:ring-blue-500 max-w-xs cursor-pointer">
-                    <div class="p-5 text-center">
-                        <img src="/images/3104a220eb1a84185008520f2c367653.jpg"
-                            alt="Doctor"
-                            class="object-cover w-full h-64 rounded-lg">
-                        <h1
-                            class="text-lg font-semibold text-gray-800 hover:text-blue-600 transition mt-3">
-                            Dr. Robert Taylor
-                        </h1>
-                        <p
-                            class="text-blue-600 font-medium mt-1">Dermatologue</p>
-                        <p class="text-gray-500 text-sm mt-2">Clinique Belle
-                            Peau</p>
-                        <div class="flex items-center justify-center mt-3">
-                            <span
-                                class="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
-                            <span
-                                class="text-sm text-gray-700 font-medium">Ofline</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    class="bg-white rounded-2xl shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-blue-400 focus-within:ring-2 focus-within:ring-blue-500 max-w-xs cursor-pointer">
-                    <div class="p-5 text-center">
-                        <img src="/images/167654fae225eca7a25216519432d4ba.jpg"
-                            alt="Doctor"
-                            class="object-cover w-full h-64 rounded-lg">
-                        <h1
-                            class="text-lg font-semibold text-gray-800 hover:text-blue-600 transition mt-3">
-                            Dr. Michael Lee
-                        </h1>
-                        <p class="text-blue-600 font-medium mt-1">Pédiatre</p>
-                        <p class="text-gray-500 text-sm mt-2">Hôpital des
-                            Enfants</p>
-                        <div class="flex items-center justify-center mt-3">
-                            <span
-                                class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                            <span
-                                class="text-sm text-gray-700 font-medium">Online</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    class="bg-white rounded-2xl shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-blue-400 focus-within:ring-2 focus-within:ring-blue-500 max-w-xs cursor-pointer">
-                    <div class="p-5 text-center">
-                        <img src="/images/doctor8.jpg"
-                            alt="Doctor"
-                            class="object-cover w-full h-64 rounded-lg">
-                        <h1
-                            class="text-lg font-semibold text-gray-800 hover:text-blue-600 transition mt-3">
-                            Dr. James Wilson
-                        </h1>
-                        <p
-                            class="text-blue-600 font-medium mt-1">Neurologie</p>
-                        <p class="text-gray-500 text-sm mt-2">Institut de Soins
-                            Cardiaques
-                        </p>
-                        <div class="flex items-center justify-center mt-3">
-                            <span
-                                class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                            <span
-                                class="text-sm text-gray-700 font-medium">Online</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    class="bg-white rounded-2xl shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-blue-400 focus-within:ring-2 focus-within:ring-blue-500 max-w-xs cursor-pointer">
-                    <div class="p-5 text-center">
-                        <img src="/images/doctor5.jpg"
-                            alt="Doctor"
-                            class="object-cover w-full h-64 rounded-lg">
-                        <h1
-                            class="text-lg font-semibold text-gray-800 hover:text-blue-600 transition mt-3">
-                            Dr. davide gogings
-                        </h1>
-                        <p
-                            class="text-blue-600 font-medium mt-1">Dermatologue</p>
-                        <p class="text-gray-500 text-sm mt-2">Centre des Os et
-                            Articulations</p>
-                        <div class="flex items-center justify-center mt-3">
-                            <span
-                                class="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
-                            <span
-                                class="text-sm text-gray-700 font-medium">Ofline</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    class="bg-white rounded-2xl shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-blue-400 focus-within:ring-2 focus-within:ring-blue-500 max-w-xs cursor-pointer">
-                    <div class="p-5 text-center">
-                        <img src="/images/doctor4.jpg"
-                            alt="Doctor"
-                            class="object-cover w-full h-64 rounded-lg">
-                        <h1
-                            class="text-lg font-semibold text-gray-800 hover:text-blue-600 transition mt-3">
-                            Dr. centrel cee
-                        </h1>
-                        <p class="text-blue-600 font-medium mt-1">Pédiatre</p>
-                        <p class="text-gray-500 text-sm mt-2">Clinique de Soins
-                            de la Peau</p>
-                        <div class="flex items-center justify-center mt-3">
-                            <span
-                                class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                            <span
-                                class="text-sm text-gray-700 font-medium">Online</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
-
-        <footer class=" mt-12 mb-12  ">
-            <div class="text-center text-sm space-y-3 ">
-                <p class="mt-10">&copy; 2025 MediCare+. Votre santé, notre
-                    priorité </p>
-                <p> Ceci est une application de démonstration. Ne pas utiliser
-                    pour des données médicales réelles. </p>
-                <p>Fait avec ❤️ et Youdev</p>
-            </div>
-        </footer>
-    </body>
-</html>
+            <script src="../js/doctors.js"></script>
+        </body>
+    </html>

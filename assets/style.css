@@ -2,3 +2,16 @@
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 
+
+@media (max-width:900px){
+    #cl{
+        display: flex;
+        flex-direction: column;
+    
+    }
+
+    #mobile-menu{
+        height: 50vh;
+    }
+
+    }
