@@ -5,7 +5,7 @@ const Cards = document.getElementById('Cards')
 
 let card = [
     {
-        src : "../images/2645c5de51ce043e2b8242b23f8b9fa1.jpg",
+        src : "/images/2645c5de51ce043e2b8242b23f8b9fa1.jpg",
         name : " Dr. Sarah Johnson",
         specialite : "Cardiologue",
         description : "Centre Médical de New York",
