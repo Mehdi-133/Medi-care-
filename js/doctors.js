@@ -5,14 +5,14 @@ const Cards = document.getElementById('Cards')
 
 let card = [
     {
-        src : "/images/2645c5de51ce043e2b8242b23f8b9fa1.jpg",
+        src : "./images/2645c5de51ce043e2b8242b23f8b9fa1.jpg",
         name : " Dr. Sarah Johnson",
         specialite : "Cardiologue",
         description : "Centre Médical de New York",
         present : 'online'
     },
     {
-        src : "/images/doctor8.jpg",
+        src : "./images/doctor8.jpg",
         name : " Dr. Michael Chen",
         specialite : "Neurologue",
         description : "Hôpital de la Ville",
@@ -20,28 +20,28 @@ let card = [
         
     },
     {
-        src : "/images/doctor5.jpg",
+        src : "./images/doctor5.jpg",
         name : " Dr.  James Wilson",
         specialite : "Pédiatre",
         description : "Hôpital pour Enfants",
         present : 'online'
     },
     {
-        src : "/images/3104a220eb1a84185008520f2c367653.jpg",
+        src : "./images/3104a220eb1a84185008520f2c367653.jpg",
         name : " Dr. Robert Taylor",
         specialite : "Cardiologue",
         description : "Institut de Soins Cardiaques",
         present : 'offline'
     },
     {
-        src : "/images/167654fae225eca7a25216519432d4ba.jpg",
+        src : "./images/167654fae225eca7a25216519432d4ba.jpg",
         name : " Dr.Davide goggings",
         specialite : "Cardiologue",
         description : "Centre Médical de New York",
         present : 'online'
     },
     {
-        src : "/images/doctor4.jpg",
+        src : "./images/doctor4.jpg",
         name : "Jhon gray",
         specialite : "Orthopédiste",
         description : "Centre des Os et Articulations",
