@@ -65,4 +65,9 @@ document.addEventListener('DOMContentLoaded', displayAppointment);
 console.log(localStorage.getItem('userInfo'))
 
 
+const burgerBtn = document.getElementById('burger-btn');
+const mobileMenu = document.getElementById('mobile-menu');
 
+        burgerBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
