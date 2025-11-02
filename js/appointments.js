@@ -41,7 +41,7 @@ userForm.onsubmit = (e) => {
     const date = e.target.elements[3].value;
     const hour = e.target.elements[4].value;
 
-    if (name === "" || email === "" || medecin === "" || date === "" || hour === "") {
+    if (name === "" || email === "" || medecin === "Veuillez-choisir" || date === "" || hour === "") {
 
        alert("Submit refused");
         return;
@@ -71,3 +71,5 @@ const mobileMenu = document.getElementById('mobile-menu');
         burgerBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
+
+        
